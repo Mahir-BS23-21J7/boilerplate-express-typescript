@@ -4,9 +4,7 @@ import * as TestController from '../controllers/TestController'
 
 const router = Router();
 
-router.get('/test', async function (req: Request, res: Response): Promise<Response> {
-    return await TestController.sampleActionForApi(req, res);
-});
+router.get('/test', TestController.sampleActionForApi);
 
 router.get('/test-queue', async function (req: Request, res: Response): Promise<Response> {
     return await TestController.sampleActionForQueue(req, res);
